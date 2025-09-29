@@ -1,12 +1,12 @@
 # Graph RAG System
 
-A modular Graph-based Retrieval-Augmented Generation (RAG) system with separate training and inference pipelines.
+A modular Graph-based Retrieval-Augmented Generation (RAG) system with separate training and inference pipelines. This repo uses Llama Index to demo a simple Graph RAG pipeline.
 
 ## Overview
 
-This system creates knowledge graphs from documents and allows you to query them using natural language. The training and inference phases are completely separated, allowing you to:
+This system creates knowledge graphs from markdown files and allows you to query them using natural language. The training and inference phases are completely separated, allowing you to:
 
-1. **Train once**: Build knowledge graphs from your documents
+1. **Train once**: Build knowledge graphs from your markdowns
 2. **Query many times**: Ask questions using stored graphs without reprocessing
 
 ## Architecture
@@ -65,9 +65,9 @@ query.py                     # Query CLI - direct implementation
 OPENAI_API_KEY=your_openai_api_key_here
 
 # Optional OpenAI settings
-OPENAI_MODEL=gpt-3.5-turbo
+OPENAI_MODEL=gpt-4o
 OPENAI_TEMPERATURE=0.1
-OPENAI_EMBEDDING_MODEL=text-embedding-ada-002
+OPENAI_EMBEDDING_MODEL=text-embedding-3-large
 
 # Optional: Neo4j configuration
 NEO4J_URI=bolt://localhost:7687
