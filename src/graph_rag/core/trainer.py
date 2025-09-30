@@ -247,9 +247,9 @@ class GraphRAGTrainer:
         print(f"Total Triplets: {len(all_triplets)}")
         print(f"Total Entities: {len(all_entities)}")
         print(f"Total Relations: {len(all_relations)}")
-        print(f"Node Embeddings: {len(nodes)} chunk embeddings")
-        print(f"Entity Embeddings: {len(all_entities)} entity embeddings")
-        print(f"Relation Embeddings: {len(all_relations)} relation embeddings")
+        print(f"Document Chunks: {len(nodes)} text chunks stored")
+        print(f"Extracted Entities: {len(all_entities)} unique entities")
+        print(f"Triplet Embeddings: {len(all_relations)} relationship embeddings")
 
     def save_knowledge_graph(self, kg_index: KnowledgeGraphIndex, name: str = None) -> str:
         """Save the knowledge graph to persistent storage"""

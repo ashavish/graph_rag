@@ -97,12 +97,12 @@ class GraphRAGInference:
             if self.verbose:
                 print(f"🔢 First 5 dimensions: {query_embedding[:5]}")
 
-            print("\n🎯 SIMILARITY SEARCH")
+            print("\n🎯 HYBRID RETRIEVAL PROCESS")
             print("=" * 30)
-            print("1. Query embedding vs. Node embeddings (chunk similarity)")
-            print("2. Query embedding vs. Entity embeddings (entity matching)")
-            print("3. Query embedding vs. Triplet embeddings (relationship matching)")
-            print("4. Combination scoring to rank relevance")
+            print("1. Keyword extraction from query")
+            print("2. Graph traversal via keyword → node lookup")
+            print("3. Triplet embedding similarity search")
+            print("4. Hybrid combination and frequency-based ranking")
 
             # Perform retrieval to see what gets retrieved
             retriever = self.kg_index.as_retriever(similarity_top_k=settings.SIMILARITY_TOP_K)
